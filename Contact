@@ -21,10 +21,4 @@ public class Contact {
     public int getNumber(){
         return number;
     }
-
-
-
-
-
-
 }
