@@ -1,0 +1,37 @@
+public class PhoneBook {
+    public static void main (String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<Contact> list = new ArrayList();
+        while (true) {
+
+            System.out.println("1 - Добавить контакт");
+            System.out.println("2 - Показать все контакты");
+            System.out.println("3 - Выход");
+
+
+            int count = Integer.parseInt(reader.readLine());
+
+            if (count == 1) {
+
+                System.out.println("Введите имя:");
+                String name = reader.readLine();
+                System.out.println("Введите фамилию:");
+                String secondName = reader.readLine();
+                System.out.println("Введите телефон:");
+                int number = Integer.parseInt(reader.readLine());
+                Contact contact = new Contact(name, secondName, number);
+                list.add(contact);
+
+            } else if (count == 2) {
+                for (int i = 0; i < list.size(); i++) {
+                    System.out.println(list.get(i).getName() + " " + list.get(i).getSecondName() + " " + list.get(i).getNumber());
+
+                }
+            } else if (count == 3) {
+                System.exit(0);
+            }
+        }
+
+
+    }
+}
