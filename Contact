@@ -1,0 +1,30 @@
+public class Contact {
+    private String name;
+    private String secondName;
+    private int number;
+
+    public Contact(String name, String secondName, int number){
+        this.name = name;
+        this.secondName = secondName;
+        this.number = number;
+    }
+
+    public String getName() {
+
+        return name;
+    }
+    public String getSecondName() {
+
+        return secondName;
+    }
+
+    public int getNumber(){
+        return number;
+    }
+
+
+
+
+
+
+}
